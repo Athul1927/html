@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Exam</title>
+  <script type="text/javascript">
+    function exam(form) {
+      var score = 0;
+
+      // Correct answers by value
+      if (form.one.value === "java") score++;
+      if (form.two.value === "object") score++;
+      if (form.three.value === "awt") score++;
+      if (form.four.value === "multiple inheritance") score++;
+
+      alert("Thank you for taking this online exam! Your score is: " + score);
+      return false; // Prevent form submission (no page reload)
+    }
+  </script>
+</head>
+
+<body bgcolor="silver">
+  <form onsubmit="return exam(this)">
+    <center><h1>Welcome to the Online Exam Form</h1></center>
+
+    <h2>1: Which is a platform-independent language?</h2>
+    <label><input type="radio" name="one" value="c++"> C++</label><br>
+    <label><input type="radio" name="one" value="c"> C</label><br>
+    <label><input type="radio" name="one" value="java"> Java</label><br>
+    <label><input type="radio" name="one" value="basic"> BASIC</label><br>
+
+    <h2>2: Which is the superclass of all classes in Java?</h2>
+    <label><input type="radio" name="two" value="object"> Object</label><br>
+    <label><input type="radio" name="two" value="math"> Math</label><br>
+    <label><input type="radio" name="two" value="system"> System</label><br>
+    <label><input type="radio" name="two" value="graphic"> Graphic</label><br>
+
+    <h2>3: Frame package is in which package?</h2>
+    <label><input type="radio" name="three" value="awt"> AWT</label><br>
+    <label><input type="radio" name="three" value="applet"> Applet</label><br>
+    <label><input type="radio" name="three" value="lang"> Lang</label><br>
+    <label><input type="radio" name="three" value="swing"> Swing</label><br>
+
+    <h2>4: Java does not support?</h2>
+    <label><input type="radio" name="four" value="inheritance"> Inheritance</label><br>
+    <label><input type="radio" name="four" value="multiple inheritance"> Multiple Inheritance</label><br>
+    <label><input type="radio" name="four" value="polymorphism"> Polymorphism</label><br>
+    <label><input type="radio" name="four" value="encryption"> Encryption</label><br><br>
+
+    <center>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </center>
+  </form>
+</body>
+</html>
+
